@@ -1,0 +1,80 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family:  Helvetica, Arial, sans-serif;
+    font-size: $m-size;
+    background-color: $offWhite;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: default;
+}
+
+.is-active {
+    color: $lightBlue;
+    font-weight: bold;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+p {
+    line-height: 140%;
+    margin-top: 0;
+}
+
+.container {
+    width: 50%;
+    margin: $xl-size auto;
+}
+
+.box {
+    background: $darkGrey;
+    box-shadow: $boxShadow;
+    border-radius: $borderRadius;
+    padding: $m-size;
+    color: white;
+}
+
+.box h1 {
+    color: orange;
+}
+
+.link {
+    background-color: orange;
+    border: none;
+    padding: $s-size;
+    border-radius: $borderRadius;
+    color: $darkGrey;
+    font-weight: bold;
+    display: block;
+    width: 10rem;
+    margin: $s-size 0 0 auto;
+    opacity: .8;
+}
+
+.link:hover {
+    opacity: 1;
+}   
+
+
+@media(max-width: $tablet-breakpoint) {
+
+    .container {
+        width: 70%;
+    }
+}
+
+@media(max-width: $mobile-breakpoint) {
+    .container {
+        width: 90%;
+    }
+}

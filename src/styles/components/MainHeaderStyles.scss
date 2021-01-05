@@ -1,0 +1,58 @@
+
+.mainHeader {
+    padding: $l-size;
+    background-color: #22201D;
+    box-shadow: $boxShadow;
+}
+
+.mainHeader h1 {
+    font-size: 10rem;
+    color: #00FFE4;
+    padding-left: $s-size;
+}
+
+.mainHeader h3 {
+    color: white;
+    font-weight: normal;
+}
+
+.mainHeader h1, h3 {
+    margin: 0;
+}
+
+.wrapper {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.profile-nav {
+    margin-top: auto;
+    align-self: baseline;
+}
+
+
+
+@media(max-width: $tablet-breakpoint) {
+    .wrapper {
+        width: 70%;
+    }
+}
+
+@media(max-width: $mobile-breakpoint) {
+    .mainHeader h1 {
+        font-size: 6rem;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-nav {
+        margin: $l-size auto 0 auto;
+        
+    }
+}

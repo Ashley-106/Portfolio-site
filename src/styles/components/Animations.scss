@@ -1,0 +1,35 @@
+@keyframes move-in-from-left {
+    from {left: -1000px;}
+    to {left: 0px;}
+}
+
+@keyframes move-in-from-right {
+    from {right: -1000px;}
+    to {right: 0px;}
+}
+
+@keyframes move-in-from-bottom {
+    from {bottom: -1000px;}
+    to {bottom: 0px;}
+}
+
+.move-in-from-left {
+    position: relative;
+    animation-name: move-in-from-left;
+    animation-duration: 1500ms;
+    animation-timing-function: ease-in-out;
+}
+
+.move-in-from-right {
+    position: relative;
+    animation-name: move-in-from-right;
+    animation-duration: 1500ms;
+    animation-timing-function: ease-in-out;
+}
+
+.move-in-from-bottom {
+    position: relative;
+    animation-name: move-in-from-bottom;
+    animation-duration: 1500ms;
+    animation-timing-function: ease-in-out;
+}
