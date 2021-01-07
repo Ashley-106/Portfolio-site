@@ -29,7 +29,8 @@ componentDidMount() {
                 <img className="profile-about" src="/media/profile.jpg" alt="profile"/>
 
                 <p>
-                    I am a Poole based aspiring web developer. Last year I decided to change my career from working as an electrician to seeking a role in web development and I.T. 
+                   Hi, I'm Ashley Marsh.<br>
+                   </br> I am a Poole based aspiring web developer. Last year I decided to change my career from working as an electrician to seeking a role in web development and I.T. 
                     <br></br>
                     <br></br>
                     I have always had a strong interest in I.T and have worked with and on computers extensively. Last year I started a full stack web development course with the training room which I've recently completed. I decided to enroll on a web development course along side self learning to give myself a broader grasp of topics and hopefully better employment chances. 

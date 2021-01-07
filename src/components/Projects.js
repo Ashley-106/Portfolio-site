@@ -40,6 +40,8 @@ componentDidMount() {
                     <br></br>
                     <p>More on the way.</p>
                     <p>Source code and more can be found at <a href="https://github.com/Ashley-106" className="contact-link" target="_target">my GitHub here..</a></p>
+
+                    
                 </div>
                 
                 </div>

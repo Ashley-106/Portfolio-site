@@ -36,9 +36,10 @@ componentDidMount() {
 
                 <p>LinkedIn: <a className="contact-link" target="_target" href="https://www.linkedin.com/in/ashley-david-marsh-6822181a0/">Ashley David Marsh</a></p>
 
-                <p>GitHub: <a className="contact-link" target="_target" href="https://github.com/Ashley-106">My GitHub</a></p>
-
-                <p>My C.V: <a className="contact-link" href="/public/files/C.V.pdf" download>Download</a></p>
+                <div className="media-spacer">
+                    <p>My GitHub: <a className="contact-link" target="_target" href="https://github.com/Ashley-106">GitHub</a></p>
+                    <p>My C.V: <a className="contact-link" href="/media/C.V.pdf" download>Download</a></p>
+                </div>
 
             </div>
             </div>

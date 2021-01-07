@@ -8,3 +8,14 @@
     clear: both;
 }
 
+.media-spacer {
+    border-top: 5px solid orange;
+    border-radius: $borderRadius;
+    display: flex;
+    justify-content: space-around;
+    padding: $s-size;
+}
+
+.media-spacer p {
+    margin: 0;
+}
