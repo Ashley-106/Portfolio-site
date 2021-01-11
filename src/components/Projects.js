@@ -38,6 +38,9 @@ componentDidMount() {
                     <a href="https://inquizitive-app-adm.herokuapp.com/" className="contact-link" target="_target">InQuizitive</a>
                     <br></br>
                     <br></br>
+                    <a href="https://george-orwell-tribute-page-adm.herokuapp.com/" className="contact-link" target="_target">Tribute Page</a>
+                    <br></br>
+                    <br></br>
                     <p>More on the way.</p>
                     <p>Source code and more can be found at <a href="https://github.com/Ashley-106" className="contact-link" target="_target">my GitHub here..</a></p>
 
