@@ -72,6 +72,7 @@
     background: url(~/public/media/inquizitive.jpg)  no-repeat;
     background-position: center center;
     background-size: cover;
+    color: black;
 }
 
 .tribute:hover {
@@ -87,6 +88,24 @@
 
 .tribute {
     background: url(~/public/media/tribute.jpg)  no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.login {
+    background: url(~/public/media/login.jpg)  no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: black;
+}
+
+.login:hover {
+    background: 
+    linear-gradient(
+      rgba(34, 32, 29, 0.7), 
+      rgba(34, 32, 29, 0.7)
+    ),
+    url(~/public/media/login.jpg)  no-repeat;
     background-position: center center;
     background-size: cover;
 }

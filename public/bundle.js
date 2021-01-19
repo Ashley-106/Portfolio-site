@@ -488,23 +488,22 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
-var onEventOver = function onEventOver(e) {
-  e.target.style.color = 'red';
-};
 
 var Projects = /*#__PURE__*/function (_React$Component) {
   _inherits(Projects, _React$Component);
 
   var _super = _createSuper(Projects);
 
-  function Projects() {
+  function Projects(props) {
     var _this;
 
     _classCallCheck(this, Projects);
 
-    _this = _super.call(this);
+    _this = _super.call(this, props); // this.projectAnimate = this.projectAnimate.bind(this)
+
     _this.state = {
-      animate: false
+      animate: false,
+      animateProjectToggle: false
     };
     return _this;
   }
@@ -523,23 +522,43 @@ var Projects = /*#__PURE__*/function (_React$Component) {
         className: this.state.animate ? "move-in-from-bottom container" : undefined
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "box"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "My projects.."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Here are a few of my current projects."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "My projects.."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Here are a few of my current projects."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "project-container"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "outer"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
         href: "http://www.davemarshglassandglazing.co.uk/",
-        className: "contact-link",
         target: "_target"
-      }, "Dave Marsh Glass and Glazing"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "project-box dmgg"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Dave Marsh Glass And Glazing"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, "Wordpress/Elementor"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Small business website")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "outer"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
         href: "https://inquizitive-app-adm.herokuapp.com/",
-        className: "contact-link",
         target: "_target"
-      }, "InQuizitive"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "project-box inquizitive"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "InQuizitive"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, "React-HTML5-CSS3-javascript"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Quiz web-app")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "outer"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
         href: "https://george-orwell-tribute-page-adm.herokuapp.com/",
-        className: "contact-link",
         target: "_target"
-      }, "Tribute Page"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "More on the way."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Source code and more can be found at ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "project-box tribute"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Tribute Page"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, "React-HTML5-CSS3-javascript"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "React webpage")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "outer"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+        href: "https://login-adm.herokuapp.com/",
+        target: "_target"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "project-box login"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Login page"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", null, "React-HTML5-CSS3-javascript"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "React login form"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "media-spacer"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Source code and more can be found at ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
         href: "https://github.com/Ashley-106",
         className: "contact-link",
         target: "_target"
-      }, "my GitHub here..")))));
+      }, "my GitHub here.."))))));
     }
   }]);
 
@@ -634,11 +653,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _public_media_dmgg_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../public/media/dmgg.jpg */ "./public/media/dmgg.jpg");
+/* harmony import */ var _public_media_inquizitive_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../public/media/inquizitive.jpg */ "./public/media/inquizitive.jpg");
+/* harmony import */ var _public_media_tribute_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../public/media/tribute.jpg */ "./public/media/tribute.jpg");
+/* harmony import */ var _public_media_login_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../public/media/login.jpg */ "./public/media/login.jpg");
 // Imports
 
+
+
+
+
+
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_public_media_dmgg_jpg__WEBPACK_IMPORTED_MODULE_2__.default);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_public_media_inquizitive_jpg__WEBPACK_IMPORTED_MODULE_3__.default);
+var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_public_media_tribute_jpg__WEBPACK_IMPORTED_MODULE_4__.default);
+var ___CSS_LOADER_URL_REPLACEMENT_3___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_public_media_login_jpg__WEBPACK_IMPORTED_MODULE_5__.default);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "html {\n  font-size: 62.5%; }\n\nbody {\n  font-family: Helvetica, Arial, sans-serif;\n  font-size: 1.6rem;\n  background-color: #edeff0; }\n\nbutton {\n  cursor: pointer; }\n\nbutton:disabled {\n  cursor: default; }\n\n.is-active {\n  color: #00FFE4;\n  font-weight: bold; }\n\na {\n  color: white;\n  text-decoration: none; }\n\np {\n  line-height: 140%;\n  margin-top: 0; }\n\n.container {\n  width: 50%;\n  margin: 4.8rem auto; }\n\n.box {\n  background: #22201D;\n  box-shadow: 1px 1px 8px 2px #22201D;\n  border-radius: 5px;\n  padding: 1.6rem;\n  color: white; }\n\n.box h1 {\n  color: orange; }\n\n.link {\n  background-color: orange;\n  border: none;\n  padding: 1.2rem;\n  border-radius: 5px;\n  color: #22201D;\n  font-weight: bold;\n  display: block;\n  width: 10rem;\n  margin: 1.2rem 0 0 auto;\n  opacity: .8; }\n\n.link:hover {\n  opacity: 1; }\n\n@media (max-width: 75rem) {\n  .container {\n    width: 70%; } }\n\n@media (max-width: 45rem) {\n  .container {\n    width: 90%; } }\n\n.profile-about {\n  height: 15rem;\n  width: 15rem;\n  border-radius: 5px;\n  display: inline-block;\n  margin-right: 1.2rem;\n  float: left;\n  clear: both; }\n\n.media-spacer {\n  border-top: 5px solid orange;\n  border-radius: 5px;\n  display: flex;\n  justify-content: space-around;\n  padding: 1.2rem; }\n\n.media-spacer p {\n  margin: 0; }\n\n@keyframes move-in-from-left {\n  from {\n    left: -1000px; }\n  to {\n    left: 0px; } }\n\n@keyframes move-in-from-right {\n  from {\n    right: -1000px; }\n  to {\n    right: 0px; } }\n\n@keyframes move-in-from-bottom {\n  from {\n    bottom: -1000px; }\n  to {\n    bottom: 0px; } }\n\n.move-in-from-left {\n  position: relative;\n  animation-name: move-in-from-left;\n  animation-duration: 1500ms;\n  animation-timing-function: ease-in-out; }\n\n.move-in-from-right {\n  position: relative;\n  animation-name: move-in-from-right;\n  animation-duration: 1500ms;\n  animation-timing-function: ease-in-out; }\n\n.move-in-from-bottom {\n  position: relative;\n  animation-name: move-in-from-bottom;\n  animation-duration: 1500ms;\n  animation-timing-function: ease-in-out; }\n\n.contact-link:hover {\n  color: orange; }\n\n.mainHeader {\n  padding: 3.2rem;\n  background-color: #22201D;\n  box-shadow: 1px 1px 8px 2px #22201D; }\n\n.mainHeader h1 {\n  font-size: 10rem;\n  color: #00FFE4;\n  padding-left: 1.2rem; }\n\n.mainHeader h3 {\n  color: white;\n  font-weight: normal; }\n\n.mainHeader h1, h3 {\n  margin: 0; }\n\n.wrapper {\n  width: 50%;\n  margin: auto;\n  display: flex;\n  justify-content: space-between; }\n\n.profile-nav {\n  margin-top: auto;\n  align-self: baseline; }\n\n@media (max-width: 75rem) {\n  .wrapper {\n    width: 70%; } }\n\n@media (max-width: 45rem) {\n  .mainHeader h1 {\n    font-size: 6rem; }\n  .wrapper {\n    flex-direction: column;\n    text-align: center; }\n  .profile-nav {\n    margin: 3.2rem auto 0 auto; } }\n\n.navItem {\n  padding: 1rem; }\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "html {\n  font-size: 62.5%; }\n\nbody {\n  font-family: Helvetica, Arial, sans-serif;\n  font-size: 1.6rem;\n  background-color: #edeff0; }\n\nbutton {\n  cursor: pointer; }\n\nbutton:disabled {\n  cursor: default; }\n\n.is-active {\n  color: #00FFE4;\n  font-weight: bold; }\n\na {\n  color: white;\n  text-decoration: none; }\n\np {\n  line-height: 140%;\n  margin-top: 0; }\n\n.container {\n  width: 50%;\n  margin: 4.8rem auto; }\n\n.box {\n  background: #22201D;\n  box-shadow: 1px 1px 8px 2px #22201D;\n  border-radius: 5px;\n  padding: 1.6rem;\n  color: white; }\n\n.box h1 {\n  color: orange; }\n\n.link {\n  background-color: orange;\n  border: none;\n  padding: 1.2rem;\n  border-radius: 5px;\n  color: #22201D;\n  font-weight: bold;\n  display: block;\n  width: 10rem;\n  margin: 1.2rem 0 0 auto;\n  opacity: .8; }\n\n.link:hover {\n  opacity: 1; }\n\n@media (max-width: 75rem) {\n  .container {\n    width: 70%; } }\n\n@media (max-width: 45rem) {\n  .container {\n    width: 90%; } }\n\n.profile-about {\n  height: 15rem;\n  width: 15rem;\n  border-radius: 5px;\n  display: inline-block;\n  margin-right: 1.2rem;\n  float: left;\n  clear: both; }\n\n.media-spacer {\n  border-top: 5px solid orange;\n  border-radius: 5px;\n  display: flex;\n  justify-content: space-around;\n  padding: 1.2rem; }\n\n.media-spacer p {\n  margin: 0; }\n\n@keyframes move-in-from-left {\n  from {\n    left: -1000px; }\n  to {\n    left: 0px; } }\n\n@keyframes move-in-from-right {\n  from {\n    right: -1000px; }\n  to {\n    right: 0px; } }\n\n@keyframes move-in-from-bottom {\n  from {\n    bottom: -1000px; }\n  to {\n    bottom: 0px; } }\n\n.move-in-from-left {\n  position: relative;\n  animation-name: move-in-from-left;\n  animation-duration: 1500ms;\n  animation-timing-function: ease-in-out; }\n\n.move-in-from-right {\n  position: relative;\n  animation-name: move-in-from-right;\n  animation-duration: 1500ms;\n  animation-timing-function: ease-in-out; }\n\n.move-in-from-bottom {\n  position: relative;\n  animation-name: move-in-from-bottom;\n  animation-duration: 1500ms;\n  animation-timing-function: ease-in-out; }\n\n.contact-link:hover {\n  color: orange; }\n\n.mainHeader {\n  padding: 3.2rem;\n  background-color: #22201D;\n  box-shadow: 1px 1px 8px 2px #22201D; }\n\n.mainHeader h1 {\n  font-size: 10rem;\n  color: #00FFE4;\n  padding-left: 1.2rem; }\n\n.mainHeader h3 {\n  color: white;\n  font-weight: normal; }\n\n.mainHeader h1, h3 {\n  margin: 0; }\n\n.wrapper {\n  width: 50%;\n  margin: auto;\n  display: flex;\n  justify-content: space-between; }\n\n.profile-nav {\n  margin-top: auto;\n  align-self: baseline; }\n\n@media (max-width: 75rem) {\n  .wrapper {\n    width: 70%; } }\n\n@media (max-width: 45rem) {\n  .mainHeader h1 {\n    font-size: 6rem; }\n  .wrapper {\n    flex-direction: column;\n    text-align: center; }\n  .profile-nav {\n    margin: 3.2rem auto 0 auto; } }\n\n.navItem {\n  padding: 1rem; }\n\n.project-container {\n  display: flex;\n  flex-wrap: wrap;\n  width: 100%;\n  margin-bottom: 1.2rem;\n  justify-content: space-evenly; }\n\n.project-box {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n  word-wrap: break-word;\n  width: 100%;\n  height: 100%; }\n\n.outer {\n  box-shadow: 1px 1px 8px 2px lightgrey;\n  border-radius: 5px;\n  width: 15em;\n  height: 10em;\n  margin: 1em;\n  cursor: pointer; }\n\n.test:hover {\n  transform: scale(1.1);\n  transition-duration: 200ms; }\n\n.dmgg:hover {\n  background: linear-gradient(rgba(34, 32, 29, 0.7), rgba(34, 32, 29, 0.7)), url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") no-repeat;\n  background-position: center center;\n  background-size: cover; }\n\n.dmgg {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") no-repeat;\n  background-position: center center;\n  background-size: cover; }\n\n.inquizitive:hover {\n  background: linear-gradient(rgba(34, 32, 29, 0.7), rgba(34, 32, 29, 0.7)), url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") no-repeat;\n  background-position: center center;\n  background-size: cover; }\n\n.inquizitive {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") no-repeat;\n  background-position: center center;\n  background-size: cover;\n  color: black; }\n\n.tribute:hover {\n  background: linear-gradient(rgba(34, 32, 29, 0.7), rgba(34, 32, 29, 0.7)), url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") no-repeat;\n  background-position: center center;\n  background-size: cover; }\n\n.tribute {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") no-repeat;\n  background-position: center center;\n  background-size: cover; }\n\n.login {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ") no-repeat;\n  background-position: center center;\n  background-size: cover;\n  color: black; }\n\n.login:hover {\n  background: linear-gradient(rgba(34, 32, 29, 0.7), rgba(34, 32, 29, 0.7)), url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ") no-repeat;\n  background-position: center center;\n  background-size: cover; }\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -717,6 +751,50 @@ module.exports = function (cssWithMappingToString) {
   };
 
   return list;
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \********************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+module.exports = function (url, options) {
+  if (!options) {
+    // eslint-disable-next-line no-param-reassign
+    options = {};
+  } // eslint-disable-next-line no-underscore-dangle, no-param-reassign
+
+
+  url = url && url.__esModule ? url.default : url;
+
+  if (typeof url !== 'string') {
+    return url;
+  } // If url is already wrapped in quotes, remove them
+
+
+  if (/^['"].*['"]$/.test(url)) {
+    // eslint-disable-next-line no-param-reassign
+    url = url.slice(1, -1);
+  }
+
+  if (options.hash) {
+    // eslint-disable-next-line no-param-reassign
+    url += options.hash;
+  } // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+
+
+  if (/["'() \t\n]/.test(url) || options.needQuotes) {
+    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, '\\n'), "\"");
+  }
+
+  return url;
 };
 
 /***/ }),
@@ -35080,6 +35158,66 @@ function warning(condition, message) {
 
 /***/ }),
 
+/***/ "./public/media/dmgg.jpg":
+/*!*******************************!*\
+  !*** ./public/media/dmgg.jpg ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "data/4051d90c224c30abfd441028f2fb7ef8-dmgg.jpg");
+
+/***/ }),
+
+/***/ "./public/media/inquizitive.jpg":
+/*!**************************************!*\
+  !*** ./public/media/inquizitive.jpg ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "data/78fee9cc5914b3a02ded45ea5dcae500-inquizitive.jpg");
+
+/***/ }),
+
+/***/ "./public/media/login.jpg":
+/*!********************************!*\
+  !*** ./public/media/login.jpg ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "data/faca0e87a04c6af3e31cd1096c6a424c-login.jpg");
+
+/***/ }),
+
+/***/ "./public/media/tribute.jpg":
+/*!**********************************!*\
+  !*** ./public/media/tribute.jpg ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "data/f2a389d485238db9d5556cb894032f49-tribute.jpg");
+
+/***/ }),
+
 /***/ "./node_modules/value-equal/esm/value-equal.js":
 /*!*****************************************************!*\
   !*** ./node_modules/value-equal/esm/value-equal.js ***!
@@ -35207,6 +35345,26 @@ function valueEqual(a, b) {
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
