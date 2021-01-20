@@ -68,13 +68,13 @@ p {
 
 @media(max-width: $tablet-breakpoint) {
 
-    .container {
-        width: 70%;
-    }
+    // .container {
+    //     width: 70%;
+    // }
 }
 
 @media(max-width: $mobile-breakpoint) {
     .container {
-        width: 90%;
+        width: 70%;
     }
 }

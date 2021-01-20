@@ -28,7 +28,7 @@ componentDidMount() {
             <h1>Contact me..</h1>
             <div className="contact">
 
-                <p>You can reach me at any of the below any time.</p>
+                <p>You can reach me at any of the below, any time.</p>
 
                 <p>Email: <a className="contact-link" href="mailto:ashleydavidmarsh@icloud.com">Ashleydavidmarsh@icloud.com</a></p>
 

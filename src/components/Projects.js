@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 
 import Nav from './Nav';
 import MainHeader from './MainHeader';
@@ -32,53 +32,38 @@ componentDidMount() {
                     <p>Here are a few of my current projects.</p>
 
                 <div className="project-container">
-
-                <div className="outer">  
-                    <a href="http://www.davemarshglassandglazing.co.uk/"  target="_target">
+            
+                <div className="outer" >  
+                    
+                    <NavLink to="/projects/dmgg">
                         <div className="project-box dmgg">
-                            <h3>Dave Marsh Glass And Glazing</h3>
-                            <br>
-                            </br>
-                            <h4>Wordpress/Elementor</h4>
-                            <p>Small business website</p>
+                            <h4>Dave Marsh Glass and Glazing</h4>
                         </div>
-                    </a>
+                    </NavLink>
                 </div>    
 
                 <div className="outer">  
-                    <a href="https://inquizitive-app-adm.herokuapp.com/"  target="_target">
+                    <NavLink to="/projects/inquizitive">
                         <div className="project-box inquizitive">
-                            <h3>InQuizitive</h3>
-                            <br>
-                            </br>
-                            <h4>React-HTML5-CSS3-javascript</h4>
-                            <p>Quiz web-app</p>
+                            <h4>Inquizitive Quiz App</h4>
                         </div>
-                    </a>
+                    </NavLink> 
                 </div>  
 
                 <div className="outer">  
-                    <a href="https://george-orwell-tribute-page-adm.herokuapp.com/"  target="_target">
+                    <NavLink to="/projects/tribute">
                         <div className="project-box tribute">
-                            <h3>Tribute Page</h3>
-                            <br>
-                            </br>
-                            <h4>React-HTML5-CSS3-javascript</h4>
-                            <p>React webpage</p>
+                            <h4>Tribute Page</h4>
                         </div>
-                    </a>
+                    </NavLink>
                 </div> 
 
                 <div className="outer">  
-                    <a href="https://login-adm.herokuapp.com/"  target="_target">
+                    <NavLink to="/projects/login">
                         <div className="project-box login">
-                            <h3>Login page</h3>
-                            <br>
-                            </br>
-                            <h4>React-HTML5-CSS3-javascript</h4>
-                            <p>React login form</p>
+                            <h4>Login Page</h4>
                         </div>
-                    </a>
+                    </NavLink>    
                 </div>
                     
                 </div>
